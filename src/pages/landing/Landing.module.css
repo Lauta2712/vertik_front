@@ -1,0 +1,91 @@
+.landingContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--background-color); 
+  color: var(--text-color);
+}
+
+.landingHeader {
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.landingContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  gap: 4rem;
+}
+
+.featureSection {
+  max-width: 720px;
+  text-align: center;
+}
+
+.featureSection h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.featureSection p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.callToAction {
+  text-align: center;
+}
+
+.callToAction p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.ctaButton {
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: var(--button-text-color);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.3rem;
+  }
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  .featureSection h2 {
+    font-size: 1.5rem;
+  }
+}
