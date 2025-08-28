@@ -17,14 +17,12 @@
   --button-text-color: #000000;
 }
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Layout general */
 html, body, #root {
   min-height: 100vh;
   display: flex;
@@ -36,10 +34,9 @@ html, body, #root {
 }
 
 main {
-  flex: 1; /* hace que el contenido empuje el footer al final */
+  flex: 1; 
 }
 
-/* Tipografía */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-primary);
   font-weight: 700;
@@ -52,7 +49,6 @@ p, li, span, a, button {
   color: var(--text-color);
 }
 
-/* Enlaces */
 a {
   text-decoration: none;
   color: var(--primary-color);
@@ -60,10 +56,9 @@ a {
 }
 
 a:hover {
-  color: #0353a4; /* tono más oscuro */
+  color: #0353a4;
 }
 
-/* Botones */
 button {
   background: var(--primary-color);
   border: none;

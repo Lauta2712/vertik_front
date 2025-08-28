@@ -49,6 +49,15 @@ i18n.use(initReactI18next).init({
         "aboutDesc": "Vertik was created by athletes who understand the importance of fueling correctly. Our mission is to help you optimize your nutrition strategy to reach your goals.",
 
         "createdBy": "Created by",
+
+        // Inglés
+        "featureMealsTitle": "Meal tracking",
+        "featureMealsDesc": "Log your daily meals to improve performance.",
+        "featureTrainingTitle": "Training nutrition",
+        "featureTrainingDesc": "Track intake during workouts to optimize energy.",
+        "featureProgressTitle": "Progress tracking",
+        "featureProgressDesc": "Visualize your growth and adjust your nutrition plan.",
+
         // CTA
         "ctaTitle": "Start optimizing your performance today",
         "ctaButton": "Get Started",
@@ -86,6 +95,13 @@ i18n.use(initReactI18next).init({
         "feature3Desc": "Accede a información clara para ajustar tus hábitos y mejorar tu rendimiento.",
         "feature4Title": "Acceso en Cualquier Lugar",
         "feature4Desc": "Tu registro de alimentación y entreno disponible en cualquier dispositivo.",
+        
+        "featureMealsTitle": "Registro de comidas",
+        "featureMealsDesc": "Controla tu alimentación diaria para mejorar tu rendimiento.",
+        "featureTrainingTitle": "Nutrición en entrenos",
+        "featureTrainingDesc": "Registra tu ingesta durante entrenamientos para optimizar energía.",
+        "featureProgressTitle": "Evolución y progreso",
+        "featureProgressDesc": "Visualiza tu avance y ajusta tu plan nutricional.",
 
         // About
         "aboutTitle": "Sobre Vertik",

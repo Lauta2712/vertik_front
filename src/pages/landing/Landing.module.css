@@ -2,14 +2,15 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: var(--background-color); 
+  background: transparent; 
   color: var(--text-color);
+  position: relative;
+  z-index: 1;
 }
 
 .landingHeader {
   text-align: center;
   padding: 6rem 2rem 4rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .title {
@@ -49,6 +50,40 @@
   line-height: 1.6;
   opacity: 0.85;
 }
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.featureCard {
+  background: var(--bg-color);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.featureCard h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.featureCard p {
+  font-size: 1rem;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
 
 .callToAction {
   text-align: center;

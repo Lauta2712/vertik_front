@@ -8,7 +8,7 @@ export default function Footer() {
     return (
         <footer className={styles.footer}>
             <p>© {new Date().getFullYear()} Vertik.</p>
-            <span>
+            <span className={styles.creator}>
                 {t('createdBy')}{' '}
             <a
                 href="https://www.lautaro.website/"
