@@ -29,6 +29,15 @@ i18n.use(initReactI18next).init({
         "about": "About",
         "contact": "Contact",
 
+        //Sidebar
+        "meals": "Meals",
+        "trainings": "Trainings",
+        "races": "Races",
+        "racePlans": "Race Plans",
+        "statistics": "Statistics",
+        "profile": "Profile",
+        "supplements": "Supplements",
+
         // Hero
         "heroTitle": "Optimize your nutrition for better performance",
         "heroSubtitle": "Track your daily meals and training fuel to perform at your best.",
@@ -80,6 +89,15 @@ i18n.use(initReactI18next).init({
         "pricing": "Precios",
         "about": "Nosotros",
         "contact": "Contacto",
+
+        //Sidebar
+        "meals": "Comidas",
+        "trainings": "Entrenamientos",
+        "races": "Carreras",
+        "racePlans": "Planes de Carrera",
+        "statistics": "Estadísticas",
+        "profile": "Perfil",
+        "supplements": "Suplementos",
 
         // Hero
         "heroTitle": "Optimiza tu nutrición para rendir mejor",

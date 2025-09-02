@@ -3,12 +3,26 @@
   top: 0;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  gap: 1rem;
-  backdrop-filter: blur(8px);
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  background: transparent;
   z-index: 1000;
+}
+
+.navbar.scrolled {
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.3); 
+}
+
+.switches {
+  display: flex;
+  gap: 1rem;
+}
+
+.title{
+  font-size: 3rem;
 }
 
 .switch {

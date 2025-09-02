@@ -1,0 +1,49 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: grey;
+  color: #f3f4f6;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.open {
+  width: 220px;
+}
+
+.closed {
+  width: 60px;
+}
+
+.toggleBtn {
+    background: none;
+    border: none;
+    color: #f3f4f6;
+    cursor: pointer;
+    padding: 1rem;
+    text-align: left;
+}
+
+.menu {
+  list-style: none;
+  /* margin-top: 35%; */
+  padding: 0;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menuItem:hover {
+  background: var(--primary-color);
+}
