@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export const CREATE_USER = "CREATE_USER";
+export const GET_USER_BY_ID = "GET_USER_BY_ID";
 export const GET_USERS = "GET_USERS";
 export const CREATE_WORKOUT = "CREATE_WORKOUT";
 export const GET_WORKOUTS = "GET_WORKOUTS";
@@ -59,5 +60,24 @@ export const getUsers = () => async (dispatch) => {
     });
   } catch (error) {
     console.error("Error al obtener usuarios:", error);
+  }
+};
+
+export const getUserById = (sub, token) => async (dispatch) => {
+  try {
+    const { data } = await axios.get(`${API_URL}/users/${sub}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    dispatch({
+      type: GET_USER_BY_ID,
+      payload: data,
+    });
+
+    return data;
+  } catch (error) {
+    console.error("Error al obtener usuario por sub:", error.response?.data || error.message);
   }
 };

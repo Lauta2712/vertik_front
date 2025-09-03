@@ -48,6 +48,10 @@
   color: var(--sidebar-icons);
   cursor: pointer;
   transition: background 0.2s;
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
 }
 
 .menuItem:hover {

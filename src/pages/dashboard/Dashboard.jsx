@@ -1,23 +1,24 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import styles from "./Dashboard.module.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import Sidebar from "../../components/sidebar/Sidebar";
+import { Outlet } from "react-router-dom";
 
-export default function Dashboard(){
-    // const users = useSelector(state => state.rootReducer.users);
-    // console.log('USERS: ', users);
+export default function Dashboard() {
+  return (
+    <div className={styles.dashboardContainer}>
+      <Navbar />
 
-    return(
-        <div className={styles.dashboardContainer}>
-            <Navbar />
+      <div className={styles.dashboardContent}>
+        <Sidebar />
 
-            <div className={styles.dashboardContent}>
-                <Sidebar />
-            </div>
+        <main className={styles.mainContent}>
+          <Outlet /> 
+        </main>
+      </div>
 
-            <Footer />
-        </div>
-    );
-};
+      <Footer />
+    </div>
+  );
+}

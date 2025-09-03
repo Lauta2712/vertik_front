@@ -1,7 +1,20 @@
-.dashboardContainer{
-    min-height: 100dvh;
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
 }
 
-.dashboardContent{
-    min-height: 90dvh;
+.dashboardContent {
+  display: flex;
+  flex: 1;
+  min-height: 90dvh;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  overflow-y: auto;
 }

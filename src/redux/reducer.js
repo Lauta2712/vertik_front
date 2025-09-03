@@ -2,7 +2,8 @@ import {
   CREATE_USER, 
   SET_AUTH_USER, 
   LOGOUT_USER,
-  GET_USERS
+  GET_USERS,
+  GET_USER_BY_ID
 } from "./actions";
 
 const initialState = {
@@ -25,6 +26,11 @@ export default function rootReducer(state = initialState, action) {
         ...state,
         users: action.payload
       }
+    case GET_USER_BY_ID:
+      return {
+        ...state,
+        authUser: action.payload,  
+      };
     case SET_AUTH_USER:
       return {
         ...state,

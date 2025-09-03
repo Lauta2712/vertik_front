@@ -38,6 +38,16 @@ i18n.use(initReactI18next).init({
         "profile": "Profile",
         "supplements": "Supplements",
 
+        //Profile
+        "noUser": "No user logged in",
+        "nickname": "Nickname",
+        "fullName": "Full name",
+        "emailVerified": "Email verified",
+        "yes": "Yes",
+        "no": "No",
+        "updatedAt": "Last updated",
+        "createdAt": "Created at",
+
         // Hero
         "heroTitle": "Optimize your nutrition for better performance",
         "heroSubtitle": "Track your daily meals and training fuel to perform at your best.",
@@ -70,6 +80,7 @@ i18n.use(initReactI18next).init({
         // CTA
         "ctaTitle": "Start optimizing your performance today",
         "ctaButton": "Get Started",
+        "logout": "Logout",
       },
     },
     es: {
@@ -98,6 +109,16 @@ i18n.use(initReactI18next).init({
         "statistics": "Estadísticas",
         "profile": "Perfil",
         "supplements": "Suplementos",
+
+        //Profile
+        "noUser": "No hay usuario loggeado",
+        "nickname": "Apodo",
+        "fullName": "Nombre completo",
+        "emailVerified": "Email verificado",
+        "yes": "Sí",
+        "no": "No",
+        "updatedAt": "Última actualización",
+        "createdAt": "Creado en",
 
         // Hero
         "heroTitle": "Optimiza tu nutrición para rendir mejor",
@@ -130,6 +151,8 @@ i18n.use(initReactI18next).init({
         // CTA
         "ctaTitle": "Empezá a optimizar tu rendimiento hoy mismo",
         "ctaButton": "Comenzar",
+    
+        "logout": "Cerrar sesión",
       },
     },
   },

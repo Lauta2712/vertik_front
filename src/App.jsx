@@ -10,14 +10,17 @@ import Statistics from "./pages/statistics/Statistics";
 import Supplements from "./pages/supplements/Supplements";
 import Profile from "./pages/profile/Profile";
 import "./App.css";
+import { getUserById } from "./redux/actions";
 
 import { useAuth0 } from "@auth0/auth0-react";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { createUser, getUsers } from "./redux/actions";
+import { createUser } from "./redux/actions";
 
 function App() {
   const { user, isAuthenticated, error } = useAuth0();
+  console.log('AUTH0 USER: ', user);
+  
   const dispatch = useDispatch();
   const { getAccessTokenSilently } = useAuth0();
 
@@ -39,7 +42,7 @@ function App() {
         };
 
         dispatch(createUser(mappedUser, token));
-        dispatch(getUsers(token));
+        // dispatch(getUserById(user.sub, token));
       }
     };
 
