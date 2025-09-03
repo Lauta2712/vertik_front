@@ -2,6 +2,13 @@ import { Routes, Route } from "react-router-dom";
 import NotFound from "./pages/notfound/NotFound";
 import Landing from "./pages/landing/Landing";
 import Dashboard from "./pages/dashboard/Dashboard";
+import Meals from "./pages/meals/Meals";
+import Trainings from "./pages/trainings/Trainings";
+import Races from "./pages/races/Races";
+import RacePlans from "./pages/raceplans/RacePlans";
+import Statistics from "./pages/statistics/Statistics";
+import Supplements from "./pages/supplements/Supplements";
+import Profile from "./pages/profile/Profile";
 import "./App.css";
 
 import { useAuth0 } from "@auth0/auth0-react";
@@ -49,8 +56,16 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/dashboard" element={<Dashboard />}>
+          <Route path="meals" element={<Meals />} />
+          <Route path="trainings" element={<Trainings />} />
+          <Route path="races" element={<Races />} />
+          <Route path="racePlans" element={<RacePlans />} />
+          <Route path="statistics" element={<Statistics />} />
+          <Route path="supplements" element={<Supplements />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
     </>
   );

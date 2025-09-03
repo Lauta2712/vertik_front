@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const { i18n } = useTranslation();
+  const location = useLocation();
   const [theme, setTheme] = useState("light");
   const [scrolled, setScrolled] = useState(false);
 
@@ -34,8 +36,10 @@ export default function Navbar() {
     i18n.changeLanguage(newLang);
   };
 
+  const isDashboard = location.pathname.startsWith("/dashboard");
+
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
+    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""} ${isDashboard ? styles.dashboard : ""}`}>      
       <h1 className={styles.title}>Vertik</h1>
 
       <div className={styles.switches}>
