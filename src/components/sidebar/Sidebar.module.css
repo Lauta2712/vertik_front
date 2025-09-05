@@ -54,6 +54,12 @@
   text-align: left;
 }
 
+.menuItem.active {
+  background: var(--primary-color);
+  font-weight: bold;
+  color: #fff;
+}
+
 .menuItem:hover {
   background: var(--primary-color);
 }
