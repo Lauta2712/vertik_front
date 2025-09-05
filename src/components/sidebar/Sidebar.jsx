@@ -24,9 +24,9 @@ export default function Sidebar() {
 
   return (
     <div className={`${styles.sidebar} ${isOpen ? styles.open : styles.closed}`}>
-      <button className={styles.toggleBtn} onClick={toggleSidebar}>
+      {/* <button className={styles.toggleBtn} onClick={toggleSidebar}>
         {isOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
+      </button> */}
 
       <ul className={styles.menu}>
         {menuItems.map((item, idx) => (

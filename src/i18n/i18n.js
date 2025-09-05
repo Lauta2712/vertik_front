@@ -81,6 +81,15 @@ i18n.use(initReactI18next).init({
         "ctaTitle": "Start optimizing your performance today",
         "ctaButton": "Get Started",
         "logout": "Logout",
+
+        //Meals
+        "weekDays": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        "mealTypes": ["Breakfast", "Lunch", "Snack", "Dinner", "Other"],
+        "newMeal": "New meal",
+        "date": "Date",
+        "type": "Type",
+        "add": "Add",
+        "close": "Close",
       },
     },
     es: {
@@ -153,6 +162,15 @@ i18n.use(initReactI18next).init({
         "ctaButton": "Comenzar",
     
         "logout": "Cerrar sesión",
+
+        //Meals
+        "weekDays": ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"],
+        "mealTypes": ["Desayuno", "Almuerzo", "Merienda", "Cena", "Snack"],
+        "newMeal": "Nueva comida",
+        "date": "Fecha",
+        "type": "Tipo",
+        "add": "Agregar",
+        "close": "Cerrar",
       },
     },
   },
