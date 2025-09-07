@@ -1,0 +1,110 @@
+.racesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 65dvh;
+    padding: 1rem;
+    color: #fff;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-top: 1rem;
+}
+
+.calendarHeader {
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5rem;
+  background: #222;
+  border-radius: 6px;
+}
+
+.calendarCell {
+  background: #111;
+  min-height: 80px;
+  border-radius: 6px;
+  padding: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.calendarCell:hover {
+  background: #1a1a1a;
+}
+
+.dayNumber {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.hasRace {
+  border: 1px solid #4cafef;
+}
+
+.raceName {
+  display: block;
+  font-size: 0.75rem;
+  color: #4cafef;
+  margin-top: 0.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.addButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #4cafef;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  color: #fff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form input,
+.form textarea {
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.form button {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #4cafef;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

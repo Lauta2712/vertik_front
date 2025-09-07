@@ -1,3 +1,3 @@
 export default function Statistics() {
-  return <h1>Acá van tus Statistics</h1>;
+    return <h1>Acá van tus Statistics</h1>;
 }

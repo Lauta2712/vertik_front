@@ -24,13 +24,10 @@ export default function Profile() {
     setIsEditing(true);
   };
 
-  const handleCancel = () => {
-    setIsEditing(false);
-  };
+  const handleCancel = () => setIsEditing(false);
 
-  const handleChange = (e) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
-  };
+  const handleChange = (e) =>
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
   const handleSave = (e) => {
     e.preventDefault();
@@ -39,24 +36,43 @@ export default function Profile() {
   };
 
   return (
-    <div className={styles.profile}>
-      <div className={styles.header}>
-        <img src={user.picture} alt={user.name} className={styles.avatar} />
-        <h2>{user.name}</h2>
+    <section className={styles.profile}>
+      <header className={styles.header}>
+        <div className={styles.avatarWrapper}>
+          <img src={user.picture} alt={user.name} className={styles.avatar} />
+        </div>
+        <h2 className={styles.name}>{user.name}</h2>
         <p className={styles.email}>{user.email}</p>
         {!isEditing && (
-          <button className={`${styles.btn} ${styles.btnSecondary}`} onClick={handleEdit}>
+          <button
+            className={`${styles.btn} ${styles.btnSecondary}`}
+            onClick={handleEdit}
+          >
             ✎ {t("edit")}
           </button>
         )}
-      </div>
+      </header>
 
       {!isEditing ? (
         <div className={styles.details}>
-          <p><strong>{t("nickname")}:</strong> {user.nickname || "N/A"}</p>
-          <p><strong>{t("fullName")}:</strong> {user.given_name} {user.family_name}</p>
-          <p><strong>{t("emailVerified")}:</strong> {user.email_verified ? t("yes") : t("no")}</p>
-          <p><strong>{t("updatedAt")}:</strong> {new Date(user.updated_at).toLocaleString()}</p>
+          <div className={styles.detailsRow}>
+            <span>{t("nickname")}:</span>
+            <span>{user.nickname || "N/A"}</span>
+          </div>
+          <div className={styles.detailsRow}>
+            <span>{t("fullName")}:</span>
+            <span>
+              {user.given_name} {user.family_name}
+            </span>
+          </div>
+          <div className={styles.detailsRow}>
+            <span>{t("emailVerified")}:</span>
+            <span>{user.email_verified ? t("yes") : t("no")}</span>
+          </div>
+          <div className={styles.detailsRow}>
+            <span>{t("updatedAt")}: </span>
+            <span>{new Date(user.updated_at).toLocaleString()}</span>
+          </div>
         </div>
       ) : (
         <form className={styles.form} onSubmit={handleSave}>
@@ -105,15 +121,22 @@ export default function Profile() {
           </div>
 
           <div className={styles.actions}>
-            <button type="submit" className={`${styles.btn} ${styles.btnPrimary}`}>
+            <button
+              type="submit"
+              className={`${styles.btn} ${styles.btnPrimary}`}
+            >
               {t("save")}
             </button>
-            <button type="button" className={`${styles.btn} ${styles.btnSecondary}`} onClick={handleCancel}>
+            <button
+              type="button"
+              className={`${styles.btn} ${styles.btnSecondary}`}
+              onClick={handleCancel}
+            >
               {t("cancel")}
             </button>
           </div>
         </form>
       )}
-    </div>
+    </section>
   );
 }

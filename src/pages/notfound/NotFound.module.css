@@ -1,31 +1,31 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
 }
 
 .title {
-  font-size: 8rem;
-  font-weight: bold;
-  margin: 0;
+    font-size: 8rem;
+    font-weight: bold;
+    margin: 0;
 }
 
 .message {
-  font-size: 1.5rem;
-  color: #374151;
-  margin: 1rem 0;
+    font-size: 1.5rem;
+    color: #374151;
+    margin: 1rem 0;
 }
 
 .homeButton {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: background 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background 0.3s ease;
 }

@@ -1,79 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
 
 :root {
-  --bg-color: #eaeaea;
-  --bg-sidebar: #6e6e6e;
-  --text-color: #222222;
-  --primary-color: #0575e6;
-  --button-text-color: #eaeaea;
-  --sidebar-icon: #eaeaea;
-  --font-primary: 'Lato', sans-serif;
-  --font-secondary: 'Open Sans', sans-serif;
+    --bg-color: #eaeaea;
+    --bg-sidebar: #6e6e6e;
+    --text-color: #222222;
+    --primary-color: #0575e6;
+    --button-text-color: #eaeaea;
+    --sidebar-icon: #eaeaea;
+    --font-primary: 'Lato', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
 }
 
-[data-theme="dark"] {
-  --bg-color: #121212;
-  /* --bg-navbar: ; */
-  --bg-sidebar: #202020;
-  --sidebar-icon: #0575e6;
-  --text-color: #f5f5f5;
-  --primary-color: #0575e6;
-  --button-text-color: #000000;
+[data-theme='dark'] {
+    --bg-color: #121212;
+    /* --bg-navbar: ; */
+    --bg-sidebar: #202020;
+    --sidebar-icon: #0575e6;
+    --text-color: #f5f5f5;
+    --primary-color: #0575e6;
+    --button-text-color: #000000;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html, body, #root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font-secondary);
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.6;
+html,
+body,
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-secondary);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
 main {
-  flex: 1; 
+    flex: 1;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-primary);
-  font-weight: 700;
-  color: var(--text-color);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    color: var(--text-color);
 }
 
-p, li, span, a, button {
-  font-family: var(--font-secondary);
-  font-weight: 400;
-  color: var(--text-color);
+p,
+li,
+span,
+a,
+button {
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    color: var(--text-color);
 }
 
 a {
-  text-decoration: none;
-  color: var(--primary-color);
-  transition: color 0.3s ease;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #0353a4;
+    color: #0353a4;
 }
 
 button {
-  background: var(--primary-color);
-  border: none;
-  border-radius: 8px;
-  padding: 0.75rem 1.5rem;
-  color: var(--button-text-color);
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    color: var(--button-text-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 button:hover {
-  background: #0353a4;
+    background: #0353a4;
 }

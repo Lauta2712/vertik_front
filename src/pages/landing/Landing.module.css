@@ -1,110 +1,113 @@
 .landingContainer {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: transparent; 
-  color: var(--text-color);
-  position: relative;
-  z-index: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: transparent;
+    color: var(--text-color);
+    position: relative;
+    z-index: 1;
 }
 
 .landingContent {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  margin-top: 5rem;
-  gap: 4rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: 5rem;
+    gap: 4rem;
 }
 
 .featureSection {
-  max-width: 720px;
-  text-align: center;
+    max-width: 720px;
+    text-align: center;
 }
 
 .featureSection h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .featureSection p {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  opacity: 0.85;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    opacity: 0.85;
 }
 
 .featuresGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-  width: 100%;
-  max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
 }
 
 .featureCard {
-  background: var(--bg-color);
-  border-radius: 16px;
-  padding: 2rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background: var(--bg-color);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .featureCard h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
 }
 
 .featureCard p {
-  font-size: 1rem;
-  opacity: 0.85;
-  line-height: 1.5;
+    font-size: 1rem;
+    opacity: 0.85;
+    line-height: 1.5;
 }
 
 .featureCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-
 .callToAction {
-  text-align: center;
+    text-align: center;
 }
 
 .callToAction p {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-  font-weight: 500;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
 }
 
 .ctaButton {
-  padding: 1rem 2.5rem;
-  font-weight: 600;
-  font-size: 1.125rem;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  background: var(--primary-color);
-  color: var(--button-text-color);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+    padding: 1rem 2.5rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: var(--button-text-color);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .ctaButton:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
-  .title {
-    font-size: 2.3rem;
-  }
-  .subtitle {
-    font-size: 1.1rem;
-  }
-  .featureSection h2 {
-    font-size: 1.5rem;
-  }
+    .title {
+        font-size: 2.3rem;
+    }
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    .featureSection h2 {
+        font-size: 1.5rem;
+    }
 }
