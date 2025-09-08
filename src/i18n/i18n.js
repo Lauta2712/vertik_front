@@ -116,6 +116,8 @@ i18n.use(initReactI18next).init({
                 salts: 'Salts',
                 food: 'Food',
                 summary: 'Plan Summary',
+                downloadPDF: "Download PDF",
+                downloadDOCX: "Download DOCX",
 
             },
         },
@@ -228,7 +230,8 @@ i18n.use(initReactI18next).init({
                 salts: 'Sales',
                 food: 'Alimentos',
                 summary: 'Resumen del Plan',
-
+                downloadPDF: "Descargar PDF",
+                downloadDOCX: "Descargar DOCX",
             },
         },
     },
