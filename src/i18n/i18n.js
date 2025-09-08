@@ -101,6 +101,22 @@ i18n.use(initReactI18next).init({
                 distance: 'Distance',
                 duration: 'Duration',
                 notes: 'Notes',
+                // Races
+                addRace: 'Add race',
+                newRace: 'New race',
+                name: 'Name',
+                position: 'Position',
+
+                // Race Plans
+                racePlansTitle: 'Race Plan',
+                discipline: 'Discipline',
+                disciplines: ['Trail Running', 'Running', 'MTB', 'Road Cycling'],
+                water: 'Water (ml)',
+                gels: 'Gels',
+                salts: 'Salts',
+                food: 'Food',
+                summary: 'Plan Summary',
+
             },
         },
         es: {
@@ -196,6 +212,23 @@ i18n.use(initReactI18next).init({
                 distance: 'Distancia',
                 duration: 'Duración',
                 notes: 'Notas',
+                
+                // Races
+                addRace: 'Agregar carrera',
+                newRace: 'Nueva carrera',
+                name: 'Nombre',
+                position: 'Posición',
+                
+                // Planes de Carrera
+                racePlansTitle: 'Plan de Carrera',
+                discipline: 'Disciplina',
+                disciplines: ['Trail Running', 'Correr', 'MTB', 'Bici de Ruta'],
+                water: 'Agua (ml)',
+                gels: 'Geles',
+                salts: 'Sales',
+                food: 'Alimentos',
+                summary: 'Resumen del Plan',
+
             },
         },
     },

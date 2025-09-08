@@ -7,7 +7,10 @@ export default function Races() {
   const [selectedRace, setSelectedRace] = useState(null);
   const [showForm, setShowForm] = useState(false);
 
-  // TODO: reemplazar con races desde Redux/DB
+  const today = new Date();
+  const [currentYear, setCurrentYear] = useState(today.getFullYear());
+  const [currentMonth, setCurrentMonth] = useState(today.getMonth());
+
   const races = [
     {
       id: 1,
@@ -29,12 +32,9 @@ export default function Races() {
     },
   ];
 
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = today.getMonth(); // 0=Enero
-  const firstDay = new Date(year, month, 1);
-  const lastDay = new Date(year, month + 1, 0);
-  const startDay = firstDay.getDay(); // 0=Domingo
+  const firstDay = new Date(currentYear, currentMonth, 1);
+  const lastDay = new Date(currentYear, currentMonth + 1, 0);
+  const startDay = firstDay.getDay();
   const daysInMonth = lastDay.getDate();
 
   const cells = [];
@@ -42,7 +42,7 @@ export default function Races() {
     cells.push(null);
   }
   for (let d = 1; d <= daysInMonth; d++) {
-    cells.push(new Date(year, month, d));
+    cells.push(new Date(currentYear, currentMonth, d));
   }
 
   const racesByDate = {};
@@ -50,9 +50,48 @@ export default function Races() {
     racesByDate[r.date] = r;
   });
 
+  const monthNames = [
+    'Enero','Febrero','Marzo','Abril','Mayo','Junio',
+    'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'
+  ];
+
+  const handlePrevMonth = () => {
+    if (currentMonth === 0) {
+      setCurrentMonth(11);
+      setCurrentYear(prev => prev - 1);
+    } else {
+      setCurrentMonth(prev => prev - 1);
+    }
+  };
+
+  const handleNextMonth = () => {
+    if (currentMonth === 11) {
+      setCurrentMonth(0);
+      setCurrentYear(prev => prev + 1);
+    } else {
+      setCurrentMonth(prev => prev + 1);
+    }
+  };
+
   return (
     <div className={styles.racesContainer}>
-      {/* <h2>{t('races')}</h2> */}
+      <div className={styles.calendarHeaderRow}>
+        {/* <button onClick={handlePrevMonth} className={styles.navButton}>◀</button>
+        <h2 className={styles.monthLabel}>
+          {monthNames[currentMonth]} {currentYear}
+        </h2>
+        <button onClick={handleNextMonth} className={styles.navButton}>▶</button> */}
+          <button onClick={handlePrevMonth} className={styles.navButton}>◀</button>
+          <h2 className={styles.monthLabel}>
+            {monthNames[currentMonth]} {currentYear}
+          </h2>
+          <button onClick={handleNextMonth} className={styles.navButton}>▶</button>
+
+          <button className={styles.addButton} onClick={() => setShowForm(true)}>
+            + {t('addRace')}
+          </button>
+      </div>
+
       <div className={styles.calendar}>
         {['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'].map(day => (
           <div key={day} className={styles.calendarHeader}>{day}</div>
@@ -60,10 +99,17 @@ export default function Races() {
         {cells.map((date, i) => {
           const isoDate = date ? date.toISOString().split('T')[0] : null;
           const race = isoDate ? racesByDate[isoDate] : null;
+
+          const isToday =
+            date &&
+            date.getDate() === today.getDate() &&
+            date.getMonth() === today.getMonth() &&
+            date.getFullYear() === today.getFullYear();
+
           return (
             <div
               key={i}
-              className={`${styles.calendarCell} ${race ? styles.hasRace : ''}`}
+              className={`${styles.calendarCell} ${race ? styles.hasRace : ''} ${isToday ? styles.today : ''}`}
               onClick={() => race && setSelectedRace(race)}
             >
               {date && <span className={styles.dayNumber}>{date.getDate()}</span>}
@@ -73,28 +119,43 @@ export default function Races() {
         })}
       </div>
 
-      <button className={styles.addButton} onClick={() => setShowForm(true)}>
-        + {t('addRace')}
-      </button>
-
-      {/* Modal detalle */}
       {selectedRace && (
         <div className={styles.modalOverlay} onClick={() => setSelectedRace(null)}>
           <div className={styles.modal} onClick={e => e.stopPropagation()}>
             <h3>{selectedRace.name}</h3>
-            <ul>
-              <li>{t('date')}: {selectedRace.date}</li>
-              <li>{t('distance')}: {selectedRace.distance_km} km</li>
-              <li>{t('duration')}: {selectedRace.duration_minutes} min</li>
-              <li>{t('position')}: {selectedRace.position}</li>
-              <li>{t('notes')}: {selectedRace.notes || '-'}</li>
+            <ul className={styles.detailsList}>
+              <li>
+                <span className={styles.detailsLabel}>{t('date')}</span>
+                <span className={styles.detailsValue}>{selectedRace.date}</span>
+              </li>
+              <li>
+                <span className={styles.detailsLabel}>{t('distance')}</span>
+                <span className={`${styles.detailsValue} ${styles.badge}`}>
+                  {selectedRace.distance_km} km
+                </span>
+              </li>
+              <li>
+                <span className={styles.detailsLabel}>{t('duration')}</span>
+                <span className={styles.detailsValue}>
+                  {selectedRace.duration_minutes} min
+                </span>
+              </li>
+              <li>
+                <span className={styles.detailsLabel}>{t('position')}</span>
+                <span className={styles.detailsValue}>#{selectedRace.position}</span>
+              </li>
+              <li style={{ gridColumn: "1 / -1" }}>
+                <span className={styles.detailsLabel}>{t('notes')}</span>
+                <span className={styles.detailsValue}>
+                  {selectedRace.notes || '-'}
+                </span>
+              </li>
             </ul>
             <button onClick={() => setSelectedRace(null)}>{t('close')}</button>
           </div>
         </div>
       )}
 
-      {/* Modal formulario */}
       {showForm && (
         <div className={styles.modalOverlay} onClick={() => setShowForm(false)}>
           <div className={styles.modal} onClick={e => e.stopPropagation()}>

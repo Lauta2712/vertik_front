@@ -29,7 +29,7 @@ export default function Sidebar() {
         { label: t('races'), icon: <Flag size={20} />, path: '/dashboard/races' },
         { label: t('racePlans'), icon: <ClipboardList size={20} />, path: '/dashboard/racePlans' },
         { label: t('statistics'), icon: <BarChart2 size={20} />, path: '/dashboard/statistics' },
-        { label: t('supplements'), icon: <Pill size={20} />, path: '/dashboard/supplements' },
+        // { label: t('supplements'), icon: <Pill size={20} />, path: '/dashboard/supplements' },
         { label: t('profile'), icon: <User size={20} />, path: '/dashboard/profile' },
     ];
 
